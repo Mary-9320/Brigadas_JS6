@@ -29,7 +29,6 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- Header Institucional -->
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
             <div class="flex items-center gap-5">
@@ -43,331 +42,433 @@
                 </div>
             </div>
             <div class="hidden lg:flex flex-col items-end justify-center">
-                <span class="text-xs font-bold nl-orange uppercase">Reporte Operativo: 01 al 07 de Febrero 2026</span>
+                <span id="header-fecha" class="text-xs font-bold nl-orange uppercase transition-all duration-300">Reporte Operativo: SE 07</span>
             </div>
         </div>
     </header>
 
+    <div class="max-w-7xl mx-auto px-6 mt-6">
+        <div class="flex space-x-6 border-b border-slate-200">
+            <button onclick="switchTab('semana1')" id="btn-semana1" class="py-3 text-sm font-black border-b-4 border-[#f37021] text-slate-800 uppercase tracking-wide transition-all">SE 07</button>
+            <button onclick="switchTab('semana2')" id="btn-semana2" class="py-3 text-sm font-bold border-b-4 border-transparent text-slate-400 hover:text-slate-600 uppercase tracking-wide transition-all">SE 08</button>
+        </div>
+    </div>
+
     <main class="max-w-7xl mx-auto px-6 py-8">
         
-        <!-- KPIs -->
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-            <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-[#f37021]">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Dosis Aplicadas</p>
-                        <h2 class="text-3xl font-black mt-1">4,645</h2>
-                        <p class="text-[11px] font-bold text-emerald-600 mt-2 flex items-center gap-1 uppercase">Impacto en Población</p>
-                    </div>
-                    <div class="nl-bg-orange p-3 rounded-xl text-white shadow-md">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-[#00a6da]">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Control de Vectores</p>
-                        <h2 class="text-3xl font-black mt-1">1,369</h2>
-                        <p class="text-[11px] font-bold text-slate-500 mt-2 italic uppercase">Depósitos eliminados</p>
-                    </div>
-                    <div class="nl-bg-blue p-3 rounded-xl text-white shadow-md">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-slate-800">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-tight">Vigilancia Epidemiológica</p>
-                        <h2 class="text-3xl font-black mt-1">1,107</h2>
-                        <p class="text-[11px] font-bold text-slate-500 mt-2 uppercase">Ciudadanos encuestados</p>
-                    </div>
-                    <div class="bg-slate-800 p-3 rounded-xl text-white shadow-md">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-emerald-600">
-                <div class="flex justify-between items-start">
-                    <div>
-                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-tight">Promoción a la Salud</p>
-                        <h2 class="text-3xl font-black mt-1">167</h2>
-                        <p class="text-[11px] font-bold text-slate-500 mt-2 uppercase">Alumnos capacitados</p>
-                    </div>
-                    <div class="bg-emerald-600 p-3 rounded-xl text-white shadow-md">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Distribución Operativa -->
-        <section class="max-w-4xl mx-auto mb-10">
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
-                <div class="mb-8 text-center">
-                    <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight">Distribución Operativa del 01 al 07 de Febrero</h3>
-                    <p class="text-sm text-slate-500 font-medium italic mt-1 uppercase tracking-wider">Desglose porcentual por programa técnico de salud</p>
-                </div>
-                <div class="h-96">
-                    <canvas id="operativaChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bitácora Filtrable -->
-        <section class="bg-white rounded-3xl border border-slate-200 card-shadow overflow-hidden">
-            <div class="p-8 border-b border-slate-100 bg-slate-50/50">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                    <div>
-                        <h3 class="text-lg font-black text-slate-800 uppercase tracking-tight">Bitácora Integral de Actividades</h3>
-                        <p class="text-xs text-slate-500 font-medium uppercase mt-1 italic text-orange-600">Seleccione un programa para filtrar los resultados</p>
-                    </div>
-                    <div class="flex flex-wrap gap-2" id="filtersContainer">
-                        <button onclick="filterTable('all')" class="filter-btn active px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-slate-200 hover:bg-slate-100 transition-all">Ver Todo</button>
-                        <button onclick="filterTable('vacunacion')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-orange-200 text-orange-700 hover:bg-orange-50 transition-all">Vacunación</button>
-                        <button onclick="filterTable('vectores')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-sky-200 text-sky-700 hover:bg-sky-50 transition-all">Vectores</button>
-                        <button onclick="filterTable('vigilancia')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-slate-200 text-slate-700 hover:bg-slate-100 transition-all leading-tight">Vigilancia Epidemiológica</button>
-                        <button onclick="filterTable('promocion')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-emerald-200 text-emerald-700 hover:bg-emerald-50 transition-all">Promoción a la Salud</button>
-                    </div>
-                </div>
-            </div>
+        <div id="semana1" class="transition-opacity duration-500 block">
             
-            <div class="max-h-[600px] overflow-y-auto custom-scrollbar">
-                <table class="w-full text-left border-collapse" id="activitiesTable">
-                    <thead class="bg-slate-100/80 sticky top-0 z-10">
-                        <tr>
-                            <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest">Actividad</th>
-                            <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest">Municipio / Colonia</th>
-                            <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest text-center">Fecha</th>
-                            <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest text-right">Resultado Impacto</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-100 text-slate-700">
-                        <!-- Vacunación -->
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">CANTORAL</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">02/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">348 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">COLINAS DEL AEROPUERTO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">05/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">236 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Los Herreras</p><p class="text-[10px] font-bold text-slate-500">ZONA CENTRO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">07/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">36 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">PALMANOVA 2DO SECTOR</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">09/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">71 VACUNAS</span></td>
-                        </tr>
-                        <!-- Extramuros -->
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">ZONA CENTRO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">03/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">411 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">VALLE DEL ROBLE</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">03/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">161 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Los Herreras</p><p class="text-[10px] font-bold text-slate-500">SAN VICENTE</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">32 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Melchor Ocampo</p><p class="text-[10px] font-bold text-slate-500">BICENTENARIO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">38 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">LÁZARO CÁRDENAS</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">36 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">VALLES DE SANTA MARÍA</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">504 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">VALLES DE SANTA MARÍA</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">133 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">CROC PESQUERÍA</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">222 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta</p><p class="text-[10px] font-bold text-slate-500">ZONA CENTRO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">353 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">General Bravo</p><p class="text-[10px] font-bold text-slate-500">BARRIO NORTE</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">05/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">47 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Doctor Coss</p><p class="text-[10px] font-bold text-slate-500">ZONA CENTRO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">05/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">44 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">SANTA ANITA</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">05/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">158 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">ZONA CENTRO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">05/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">527 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">BELLA VISTA</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">06/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">137 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">LOMAS DE SAN MARTÍN</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">06/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">95 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">VALLE DEL ROBLE</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">06/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">529 VACUNAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
-                            <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">ZONA CENTRO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">06/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">527 VACUNAS</span></td>
-                        </tr>
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-[#f37021]">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Dosis Aplicadas</p>
+                            <h2 class="text-3xl font-black mt-1">4,645</h2>
+                            <p class="text-[11px] font-bold text-emerald-600 mt-2 flex items-center gap-1 uppercase">Impacto en Población</p>
+                        </div>
+                        <div class="nl-bg-orange p-3 rounded-xl text-white shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                    </div>
+                </div>
 
-                        <!-- Vectores -->
-                        <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">JERÓNIMO TREVIÑO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">229 DEPÓSITOS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">JERÓNIMO TREVIÑO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">05/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">122 DEPÓSITOS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">JERÓNIMO TREVIÑO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">06/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">1,018 DEPÓSITOS</span></td>
-                        </tr>
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-[#00a6da]">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Control de Vectores</p>
+                            <h2 class="text-3xl font-black mt-1">1,369</h2>
+                            <p class="text-[11px] font-bold text-slate-500 mt-2 italic uppercase">Depósitos eliminados</p>
+                        </div>
+                        <div class="nl-bg-blue p-3 rounded-xl text-white shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                    </div>
+                </div>
 
-                        <!-- Vigilancia -->
-                        <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">JOAN SEBASTIÁN</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">02/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">397 ENCUESTAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">CANTORAL</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">02/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">350 ENCUESTAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">COLINAS DEL AEROPUERTO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">05/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">240 ENCUESTAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Los Herreras</p><p class="text-[10px] font-bold text-slate-500">ZONA CENTRO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">07/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">40 ENCUESTAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">PALMANOVA 2DO SECTOR</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">09/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">80 ENCUESTAS</span></td>
-                        </tr>
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-slate-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-tight">Vigilancia Epidemiologica</p>
+                            <h2 class="text-3xl font-black mt-1">1,107</h2>
+                            <p class="text-[11px] font-bold text-slate-500 mt-2 uppercase">Ciudadanos encuestados</p>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded-xl text-white shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                    </div>
+                </div>
 
-                        <!-- Promoción -->
-                        <tr class="activity-row hover:bg-emerald-50/30 transition-all border-l-4 border-l-emerald-500" data-cat="promocion">
-                            <td class="px-8 py-4 text-xs font-black text-emerald-800 uppercase tracking-tighter">VISITAS A PLANTELES EDUCATIVOS FERIAS</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">China</p><p class="text-[10px] font-bold text-slate-500">LA BARRETA</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">03/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">47 PLÁTICAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-emerald-50/30 transition-all border-l-4 border-l-emerald-500" data-cat="promocion">
-                            <td class="px-8 py-4 text-xs font-black text-emerald-800 uppercase tracking-tighter">VISITAS A PLANTELES EDUCATIVOS FERIAS</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">China</p><p class="text-[10px] font-bold text-slate-500">MORONES PRIETO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">03/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">5 PLÁTICAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-emerald-50/30 transition-all border-l-4 border-l-emerald-500" data-cat="promocion">
-                            <td class="px-8 py-4 text-xs font-black text-emerald-800 uppercase tracking-tighter">VISITAS A PLANTELES EDUCATIVOS FERIAS</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">China</p><p class="text-[10px] font-bold text-slate-500">REVOLUCIÓN</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">03/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">24 PLÁTICAS</span></td>
-                        </tr>
-                        <tr class="activity-row hover:bg-emerald-50/30 transition-all border-l-4 border-l-emerald-500" data-cat="promocion">
-                            <td class="px-8 py-4 text-xs font-black text-emerald-800 uppercase tracking-tighter">VISITAS A PLANTELES EDUCATIVOS FERIAS</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">China</p><p class="text-[10px] font-bold text-slate-500">ZONA CENTRO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">91 PLÁTICAS</span></td>
-                        </tr>
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-emerald-600">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-tight">Promoción a la Salud</p>
+                            <h2 class="text-3xl font-black mt-1">167</h2>
+                            <p class="text-[11px] font-bold text-slate-500 mt-2 uppercase">Alumnos capacitados</p>
+                        </div>
+                        <div class="bg-emerald-600 p-3 rounded-xl text-white shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        <!-- Zoonosis (Se muestra en "Ver Todo") -->
-                        <tr class="activity-row hover:bg-purple-50/30 transition-all border-l-4 border-l-purple-500" data-cat="zoonosis">
-                            <td class="px-8 py-4 text-xs font-bold uppercase">Zoonosis</td>
-                            <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">COLINAS DEL AEROPUERTO</p></td>
-                            <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">02/02/2026</td>
-                            <td class="px-8 py-4 text-right"><span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">200 VACUNAS</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div id="noResults" class="hidden p-20 text-center text-slate-400 uppercase font-black tracking-widest text-xs">
-                No se encontraron actividades para esta categoría
-            </div>
-        </section>
+            <section class="max-w-4xl mx-auto mb-10">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="mb-8 text-center">
+                        <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight">ACTIVIDADES - SE 07</h3>
+                        <p class="text-sm text-slate-500 font-medium italic mt-1 uppercase tracking-wider">Desglose porcentual por programa técnico de salud</p>
+                    </div>
+                    <div class="h-96">
+                        <canvas id="operativaChart1"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl border border-slate-200 card-shadow overflow-hidden">
+                <div class="p-8 border-b border-slate-100 bg-slate-50/50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                        <div>
+                            <h3 class="text-lg font-black text-slate-800 uppercase tracking-tight">Bitácora Integral de Actividades</h3>
+                            <p class="text-xs text-slate-500 font-medium uppercase mt-1 italic text-orange-600">Seleccione un programa para filtrar los resultados</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="filterTable('all', 'semana1')" class="filter-btn active px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-slate-200 hover:bg-slate-100 transition-all">Ver Todo</button>
+                            <button onclick="filterTable('vacunacion', 'semana1')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-orange-200 text-orange-700 hover:bg-orange-50 transition-all">Vacunación</button>
+                            <button onclick="filterTable('vectores', 'semana1')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-sky-200 text-sky-700 hover:bg-sky-50 transition-all">Vectores</button>
+                            <button onclick="filterTable('vigilancia', 'semana1')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-slate-200 text-slate-700 hover:bg-slate-100 transition-all leading-tight">Vigilancia Epidemiológica</button>
+                            <button onclick="filterTable('promocion', 'semana1')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-emerald-200 text-emerald-700 hover:bg-emerald-50 transition-all">Promoción a la Salud</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="max-h-[600px] overflow-y-auto custom-scrollbar">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-slate-100/80 sticky top-0 z-10">
+                            <tr>
+                                <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest">Actividad</th>
+                                <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest">Municipio / Colonia</th>
+                                <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest text-center">Fecha</th>
+                                <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest text-right">Resultado Impacto</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">CANTORAL</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">02/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">348 VACUNAS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">JERÓNIMO TREVIÑO</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">04/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">229 DEPÓSITOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">JOAN SEBASTIÁN</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">02/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">397 ENCUESTAS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-emerald-50/30 transition-all border-l-4 border-l-emerald-500" data-cat="promocion">
+                                <td class="px-8 py-4 text-xs font-black text-emerald-800 uppercase tracking-tighter">VISITAS A PLANTELES EDUCATIVOS FERIAS</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">China</p><p class="text-[10px] font-bold text-slate-500">LA BARRETA</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">03/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">47 PLÁTICAS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-purple-50/30 transition-all border-l-4 border-l-purple-500" data-cat="zoonosis">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Zoonosis</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">COLINAS DEL AEROPUERTO</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">02/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">200 VACUNAS</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="no-results-msg hidden p-20 text-center text-slate-400 uppercase font-black tracking-widest text-xs">
+                    No se encontraron actividades para esta categoría
+                </div>
+            </section>
+        </div>
+
+
+        <div id="semana2" class="hidden transition-opacity duration-500">
+            
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-[#f37021]">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Dosis Aplicadas</p>
+                            <h2 class="text-3xl font-black mt-1">1,719</h2>
+                            <p class="text-[11px] font-bold text-emerald-600 mt-2 flex items-center gap-1 uppercase">Impacto en Población</p>
+                        </div>
+                        <div class="nl-bg-orange p-3 rounded-xl text-white shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-[#00a6da]">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Control de Vectores</p>
+                            <h2 class="text-3xl font-black mt-1">6,599</h2>
+                            <p class="text-[11px] font-bold text-slate-500 mt-2 italic uppercase">Depósitos eliminados</p>
+                        </div>
+                        <div class="nl-bg-blue p-3 rounded-xl text-white shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-slate-800">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-tight">Vigilancia Epidemio.</p>
+                            <h2 class="text-3xl font-black mt-1">2,383</h2>
+                            <p class="text-[11px] font-bold text-slate-500 mt-2 uppercase">Ciudadanos encuestados</p>
+                        </div>
+                        <div class="bg-slate-800 p-3 rounded-xl text-white shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-slate-100 border-l-8 border-l-emerald-600">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-tight">Promoción y Participación</p>
+                            <h2 class="text-3xl font-black mt-1">630</h2>
+                            <p class="text-[11px] font-bold text-slate-500 mt-2 uppercase">Ciudadanos Impactados</p>
+                        </div>
+                        <div class="bg-emerald-600 p-3 rounded-xl text-white shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto mb-10">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 card-shadow">
+                    <div class="mb-8 text-center">
+                        <h3 class="text-xl font-black text-slate-800 uppercase tracking-tight">ACTIVIDADES - SE 08</h3>
+                        <p class="text-sm text-slate-500 font-medium italic mt-1 uppercase tracking-wider">Desglose porcentual por programa técnico de salud</p>
+                    </div>
+                    <div class="h-96">
+                        <canvas id="operativaChart2"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-3xl border border-slate-200 card-shadow overflow-hidden">
+                <div class="p-8 border-b border-slate-100 bg-slate-50/50">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                        <div>
+                            <h3 class="text-lg font-black text-slate-800 uppercase tracking-tight">Bitácora Integral de Actividades</h3>
+                            <p class="text-xs text-slate-500 font-medium uppercase mt-1 italic text-orange-600">Seleccione un programa para filtrar los resultados</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="filterTable('all', 'semana2')" class="filter-btn active px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-slate-200 hover:bg-slate-100 transition-all">Ver Todo</button>
+                            <button onclick="filterTable('vacunacion', 'semana2')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-orange-200 text-orange-700 hover:bg-orange-50 transition-all">Vacunación</button>
+                            <button onclick="filterTable('vectores', 'semana2')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-sky-200 text-sky-700 hover:bg-sky-50 transition-all">Vectores</button>
+                            <button onclick="filterTable('vigilancia', 'semana2')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-slate-200 text-slate-700 hover:bg-slate-100 transition-all leading-tight">Vigilancia Epidemiológica</button>
+                            <button onclick="filterTable('promocion', 'semana2')" class="filter-btn px-4 py-2 rounded-xl text-[10px] font-extrabold uppercase tracking-widest border border-emerald-200 text-emerald-700 hover:bg-emerald-50 transition-all">Promoción a la Salud</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="max-h-[600px] overflow-y-auto custom-scrollbar">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-slate-100/80 sticky top-0 z-10">
+                            <tr>
+                                <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest">Actividad</th>
+                                <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest">Municipio / Colonia</th>
+                                <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest text-center">Fecha</th>
+                                <th class="px-8 py-4 text-[10px] font-black text-slate-500 uppercase tracking-widest text-right">Resultado Impacto</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-700">
+                            <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia epidemiológica</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">PALMANOVA 2DO SECTOR</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">09/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">80 ENCUESTADOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">PALMANOVA 2DO SECTOR</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">09/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">360 ENCUESTADOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Ramones</p><p class="text-[10px] font-bold text-slate-500">GARZA GONZALEZ</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">10/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">10 ENCUESTADOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">LOMAS DE SAN AGUSTIN</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">11/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">273 ENCUESTADOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">ARBOLEDAS</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">12/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">145 ENCUESTADOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">VALLE DEL ROBLE</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">13/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">468 ENCUESTADOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-slate-100 transition-all border-l-4 border-l-slate-800" data-cat="vigilancia">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vigilancia Epidemiológica</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">VALLE FLORESTA</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">14/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-slate-800 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase">1047 ENCUESTADOS</span></td>
+                            </tr>
+
+                            <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Jornadas de Vacunación</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">PALMANOVA 2DO SECTOR</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">09/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">81 DOSIS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">PALMANOVA 2DO SECTOR</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">09/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">199 DOSIS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
+                                <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">CANTORAL</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">10/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">634 DOSIS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-400" data-cat="vacunacion">
+                                <td class="px-8 py-4 text-xs font-bold uppercase italic">Puesto extramuros</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">LAS HACIENDAS</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">11/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">130 DOSIS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">LOMAS DE SAN AGUSTIN</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">12/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">70 DOSIS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">ARBOLEDAS</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">12/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">93 DOSIS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">VALLE DEL ROBLE</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">13/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">236 DOSIS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-orange-50/30 transition-all border-l-4 border-l-orange-500" data-cat="vacunacion">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Bloqueo</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">VALLE FLORESTA</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">14/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">276 DOSIS</span></td>
+                            </tr>
+
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">LAZARO CARDENAS</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">09/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">314 DEPÓSITOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">FOMERREY</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">09/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">943 DEPÓSITOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">LAZARO CARDENAS</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">10/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">855 DEPÓSITOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">FOMERREY</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">10/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">703 DEPÓSITOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">LAZARO CARDENAS</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">11/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">1016 DEPÓSITOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">FOMERREY</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">11/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">1528 DEPÓSITOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">LAZARO CARDENAS</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">13/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">474 DEPÓSITOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">FOMERREY</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">13/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">574 DEPÓSITOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-sky-50/30 transition-all border-l-4 border-l-sky-500" data-cat="vectores">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Vectores</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta Jiménez</p><p class="text-[10px] font-bold text-slate-500">ALBEROS</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">13/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-sky-50 text-sky-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">192 DEPÓSITOS</span></td>
+                            </tr>
+
+                            <tr class="activity-row hover:bg-purple-50/30 transition-all border-l-4 border-l-purple-500" data-cat="zoonosis">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Zoonosis</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">VALLES DE SANTA MARIA</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">13/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">25 ESTERILIZADOS</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-purple-50/30 transition-all border-l-4 border-l-purple-500" data-cat="zoonosis">
+                                <td class="px-8 py-4 text-xs font-bold uppercase">Zoonosis</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Pesquería</p><p class="text-[10px] font-bold text-slate-500">VALLES DE SANTA MARIA</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">13/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">100 VACUNADOS</span></td>
+                            </tr>
+
+                            <tr class="activity-row hover:bg-emerald-50/30 transition-all border-l-4 border-l-emerald-500" data-cat="promocion">
+                                <td class="px-8 py-4 text-xs font-black text-emerald-800 uppercase tracking-tighter">BRIGADAS DE PARTICIPACIÓN CIUDADANA</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta</p><p class="text-[10px] font-bold text-slate-500">CASA BLANCA</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">13/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">30 ASISTENTES</span></td>
+                            </tr>
+                            <tr class="activity-row hover:bg-emerald-50/30 transition-all border-l-4 border-l-emerald-500" data-cat="promocion">
+                                <td class="px-8 py-4 text-xs font-black text-emerald-800 uppercase tracking-tighter">BRIGADAS DE PARTICIPACIÓN CIUDADANA</td>
+                                <td class="px-8 py-4"><p class="text-sm font-bold uppercase text-slate-800">Cadereyta</p><p class="text-[10px] font-bold text-slate-500">CASA BLANCA</p></td>
+                                <td class="px-8 py-4 text-center text-xs font-bold text-slate-400">13/02/2026</td>
+                                <td class="px-8 py-4 text-right"><span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase">600 CONDONES</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="no-results-msg hidden p-20 text-center text-slate-400 uppercase font-black tracking-widest text-xs">
+                    No se encontraron actividades para esta categoría
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="mt-12 mb-20 px-6 max-w-7xl mx-auto border-t border-slate-200 pt-8 text-center sm:text-left">
@@ -375,14 +476,42 @@
     </footer>
 
     <script>
-        // Función de Filtrado
-        function filterTable(category) {
-            const rows = document.querySelectorAll('.activity-row');
-            const btns = document.querySelectorAll('.filter-btn');
-            const noResults = document.getElementById('noResults');
+        // Función para cambiar de pestaña
+        function switchTab(tabId) {
+            // Ocultar ambas secciones
+            document.getElementById('semana1').classList.add('hidden');
+            document.getElementById('semana2').classList.add('hidden');
+            
+            // Estilos inactivos para los botones
+            document.getElementById('btn-semana1').classList.replace('border-[#f37021]', 'border-transparent');
+            document.getElementById('btn-semana1').classList.replace('text-slate-800', 'text-slate-400');
+            
+            document.getElementById('btn-semana2').classList.replace('border-[#f37021]', 'border-transparent');
+            document.getElementById('btn-semana2').classList.replace('text-slate-800', 'text-slate-400');
+            
+            // Mostrar la seleccionada y aplicar estilos activos
+            document.getElementById(tabId).classList.remove('hidden');
+            document.getElementById('btn-' + tabId).classList.replace('border-transparent', 'border-[#f37021]');
+            document.getElementById('btn-' + tabId).classList.replace('text-slate-400', 'text-slate-800');
+
+            // Actualizar Fecha del Header
+            const headerFecha = document.getElementById('header-fecha');
+            if(tabId === 'semana1') {
+                headerFecha.innerText = 'Reporte Operativo: SE 07';
+            } else {
+                headerFecha.innerText = 'Reporte Operativo: SE 08';
+            }
+        }
+
+        // Función de Filtrado aislada por contenedor visible
+        function filterTable(category, containerId) {
+            const container = document.getElementById(containerId);
+            const rows = container.querySelectorAll('.activity-row');
+            const btns = container.querySelectorAll('.filter-btn');
+            const noResults = container.querySelector('.no-results-msg');
             let found = false;
 
-            // Actualizar botones
+            // Actualizar apariencia de los botones del contenedor actual
             btns.forEach(btn => {
                 btn.classList.remove('active');
                 if (btn.getAttribute('onclick').includes(`'${category}'`)) {
@@ -400,21 +529,35 @@
                 }
             });
 
-            noResults.style.display = found ? 'none' : 'block';
+            if(noResults) {
+                noResults.style.display = found ? 'none' : 'block';
+            }
         }
 
         window.onload = function() {
-            const ctxAct = document.getElementById('operativaChart').getContext('2d');
-            new Chart(ctxAct, {
+            // Configuración común para las gráficas
+            const chartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '72%',
+                plugins: {
+                    legend: { 
+                        position: 'bottom', 
+                        labels: { 
+                            padding: 25, 
+                            font: { weight: 'bold', size: 9 },
+                            usePointStyle: true
+                        } 
+                    }
+                }
+            };
+            
+            // Gráfica Semana 1 (SE 07)
+            const ctxAct1 = document.getElementById('operativaChart1').getContext('2d');
+            new Chart(ctxAct1, {
                 type: 'doughnut',
                 data: {
-                    labels: [
-                        'VACUNACIÓN', 
-                        'CONTROL DE VECTORES', 
-                        'VIGILANCIA EPIDEMIOLÓGICA', 
-                        'PROMOCIÓN A LA SALUD', 
-                        'ZOONOSIS'
-                    ],
+                    labels: ['VACUNACIÓN', 'CONTROL DE VECTORES', 'VIGILANCIA EPIDEMIOLÓGICA', 'PROMOCIÓN A LA SALUD', 'ZOONOSIS'],
                     datasets: [{
                         data: [4645, 1369, 1107, 167, 200],
                         backgroundColor: ['#f37021', '#00a6da', '#1e293b', '#10b981', '#a855f7'],
@@ -422,21 +565,23 @@
                         hoverOffset: 25
                     }]
                 },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    cutout: '72%',
-                    plugins: {
-                        legend: { 
-                            position: 'bottom', 
-                            labels: { 
-                                padding: 25, 
-                                font: { weight: 'bold', size: 9 },
-                                usePointStyle: true
-                            } 
-                        }
-                    }
-                }
+                options: chartOptions
+            });
+
+            // Gráfica Semana 2 (SE 08)
+            const ctxAct2 = document.getElementById('operativaChart2').getContext('2d');
+            new Chart(ctxAct2, {
+                type: 'doughnut',
+                data: {
+                    labels: ['VACUNACIÓN', 'CONTROL DE VECTORES', 'VIGILANCIA EPIDEMIOLÓGICA', 'PROMOCIÓN Y PARTICIPACIÓN', 'ZOONOSIS'],
+                    datasets: [{
+                        data: [1719, 6599, 2383, 630, 125], // Datos sumados de la imagen
+                        backgroundColor: ['#f37021', '#00a6da', '#1e293b', '#10b981', '#a855f7'],
+                        borderWidth: 0,
+                        hoverOffset: 25
+                    }]
+                },
+                options: chartOptions
             });
         };
     </script>
